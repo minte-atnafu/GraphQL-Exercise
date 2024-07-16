@@ -1,62 +1,21 @@
-export const games= [
-    {
-        name: "car race",
-        platform: ["p55", "xbox"],
-        verified:true
-    },
-    {
-        name: "Horse ride",
-        platform: ["ps", "plastaion"],
-        verified:false
-    },
-    {
-        name: "duck",
-        platform: ["ps", "disk"],
-        verified:true
-    },
+export let games = [
+    { id: '1', title: 'zelds, Tears of the kingdom', platform: ['Switch'] },
+{ id: '2', title: 'Final Fantasy 7 Remake', platform: ['pss', 'Xbox'] },
+{ id: '3', title: 'Elden king', platform: ['pss', 'Xbox', 'pc'] },
+{ id: '4', title: 'mario kart', platform: ['Switch'] },
+{id:'5', title:'pokemon', platform:['pss','Xbox','pc']},
 ]
 
-export const books = [
-    {
-      title: 'The Awakening',
-      author: 'Kate Chopin',
-    },
-    {
-      title: 'City of Glass',
-      author: 'Paul Auster',
-      },
-    {
-       title: 'ፍቅር እስከ መቃብር።',
-       author: 'ሃዲስ አለማየው',
-    },
-  ];
-export const reviews = [
-    {
-        id: 2,
-        rating: 9,
-        content: "lorem",
-        book: books[0],
-        game:games[0]
-    },
-    {
-        id: 1,
-        rating: 10,
-        content: "Lorem ipsum 2",
-        book: books[1],
-        game:games[1]
-    },
-    {
-        id: 3,
-        rating: 7,
-        content: "Story",
-        book: books[2],
-        game:games[2]
-    },
-    {
-        id: 4,
-        rating: 8,
-        content: "story",
-        book: books[1],
-        game:games[0]
-    }
+export let authors = [
+    { id: '1', name: 'mario', verified: true },
+    { id: '2', name: 'yoshi', verified: false },
+    {id:'3', name:'peach', verified:true},
+]
+
+export let reviews = [
+    { id: "1", rating: 9, content: "bla", author_id: '1', game_id: '2' },
+    { id: '2', rating: 10, content: "bla", author_id: '2', game_id: '1' },
+    { id: '3', rating: 7, content: "bla", author_id: '3', game_id: '3' },
+    { id: '4', rating: 5, content: "bla", author_id: '2', game_id: '4' },
+    { id: '5', rating: 8, content: "bla", author_id: '2', game_id:'5'},
 ]

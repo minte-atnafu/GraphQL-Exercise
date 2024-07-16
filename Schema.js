@@ -1,25 +1,27 @@
-const typeDefs = `
-  type Book {
-  title:String
-  author:String
-  }
-  type Game{
-   name:String
-   platform:[String]
-   verified:Boolean
-  }
-   type Reviews{
-   id:ID
-   rating:Int
-   content:String
-   book:Book
-   game:Game
-   }
-   type Query {
-     reviews:[Reviews]
-     books:[Book]
-     games:[Game]
-   }
-
-`;
+const typeDefs = `#graphql
+     type Game {
+      id: ID!
+      title: String!
+      platform: [String!]!
+     }
+     type Review{
+         id:ID!
+         rating:Int!
+         content:String!   
+     }
+     type Author{
+      id:ID!
+      name:String!
+      verified: Boolean!
+     }
+     type Query {
+       reviews:[Review]
+       review(id:ID!): Review
+       games:[Game]
+       game(id:ID!):Game
+       authors:[Author]
+       author(id:ID!):Author
+     }
+`
 export default typeDefs;
+// int, float, string and ID are the scalars ww use in graphql
