@@ -2,20 +2,21 @@
     const { EventEmitter } = await import('events');
     EventEmitter.defaultMaxListeners = 20;
   })();
-import { ApolloServer } from '@apollo/server';
+import { ApolloServer } from '@apollo/server'
 import { startStandaloneServer } from '@apollo/server/standalone';
-import typeDefs from './Schema.js';
-import resolvers from './resolver.js';
 
-
+//the schema
+import typeDefs from './Schema.js'
+import resolvers from './resolver.js'
+//set up appollo server
 const server = new ApolloServer({
+  //typeDefs are the definotion of different types of data
   typeDefs,
-  resolvers,
-});
+  resolvers // are functions used to featch data
+})
 
-// Start the standalone server
 const { url } = await startStandaloneServer(server, {
-  listen: { port: 4000 },
-});
+  listen: {port:4000}
+})
 
-console.log(`🚀 Server ready at: ${url}`);
+console.log('Appollo server is ready', 4000);
